@@ -56,6 +56,19 @@ set linebreak             " coupe aux mots, pas au milieu
 " ---------------------------------------------------------
 " Performance & réactivité
 " ---------------------------------------------------------
+
+" Presse-papiers système
+set clipboard=unnamedplus
+
+" ---------------------------------------------------------
+" Dictionnaire
+" ---------------------------------------------------------
+
+set spelllang=fr
+
+" ---------------------------------------------------------
+" Performance & réactivité
+" ---------------------------------------------------------
 set updatetime=300
 set timeoutlen=500
 set lazyredraw             " ne redessine pas pendant les macros

@@ -17,8 +17,8 @@ nnoremap <Leader>r :source .vimrc<CR>
 " ---------------------------------------------------------
 " Ouvrir / créer un fichier n'importe où
 " ---------------------------------------------------------
-nnoremap n :call CreateAnyFile()<CR>
-nnoremap <leader>o :call OpenFileAnywhere()<CR>
+nnoremap <leader>n :call CreateAnyFile()<CR>
+nnoremap <leader>f :call OpenFileAnywhere()<CR>
 
 
 " ---------------------------------------------------------
@@ -82,3 +82,12 @@ nnoremap <leader>fm /\<[a-f0-9]\{32\}\><CR>
 nnoremap <leader>fs /\<[a-f0-9]\{64\}\><CR>
 " Timestamp to date (sélectionner timestamp puis <leader>td)
 vnoremap <leader>td y:r !date -d @<C-r>"<CR>
+
+" ---------------------------------------------------------
+" Vérification orthographique
+" ---------------------------------------------------------
+
+" Toggle spellcheck
+nnoremap sp :setlocal spell! spelllang=fr,en<CR>
+
+

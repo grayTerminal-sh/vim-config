@@ -37,8 +37,9 @@ function! s:RunFlake8()
 endfunction
 
 " <leader>f dans un fichier Python : lancer flake8
-autocmd FileType python nnoremap <buffer> <leader>f :w <CR>:call <SID>RunFlake8()<CR>
+autocmd FileType python nnoremap <buffer> <leader>p :w <CR>:call <SID>RunFlake8()<CR>
 
 " Raccourcis globaux pour naviguer dans la quickfix
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprevious<CR>
+

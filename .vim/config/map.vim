@@ -7,17 +7,16 @@
 " ---------------------------------------------------------
 let mapleader = " "
 
-
 " ---------------------------------------------------------
 " Recharger la configuration de vim
 " ---------------------------------------------------------
-nnoremap <Leader>r :source .vimrc<CR>
+nnoremap <leader>r :source ~/.vimrc<CR>
 
 
 " ---------------------------------------------------------
 " Ouvrir / créer un fichier n'importe où
 " ---------------------------------------------------------
-nnoremap <leader>n :call CreateAnyFile()<CR>
+nnoremap <leader>nf :call CreateAnyFile()<CR>
 nnoremap <leader>f :call OpenFileAnywhere()<CR>
 
 
@@ -46,7 +45,7 @@ nnoremap e :Ex<CR>
 " ---------------------------------------------------------
 nnoremap b<Right> :bnext<CR>
 nnoremap b<Left> :bprevious<CR>
-nnoremap bf :bd<CR>
+nnoremap bq :bd<CR>
 nnoremap <leader><Tab> :b#<CR>
 nnoremap b :ls<CR>:b<Space>
 nnoremap b1 :b 1<CR>
@@ -91,3 +90,9 @@ vnoremap <leader>td y:r !date -d @<C-r>"<CR>
 nnoremap sp :setlocal spell! spelllang=fr,en<CR>
 
 
+" ---------------------------------------------------------
+" Copier
+" ---------------------------------------------------------
+
+nnoremap yy yy:call system("wl-copy", @")<CR>
+vnoremap y  y:call system("wl-copy", @")<CR>

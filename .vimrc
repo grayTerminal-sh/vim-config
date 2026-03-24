@@ -20,6 +20,7 @@ filetype plugin indent on " détection intelligente du type de fichier
 set shell=/bin/zsh
 set shortmess+=c
 set signcolumn=yes
+set clipboard=unnamedplus
 
 " ---------------------------------------------------------
 " Affichage & lisibilité

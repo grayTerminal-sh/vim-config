@@ -17,10 +17,14 @@ endfunction
 " Ouverture de fichier
 function! OpenFileAnywhere()
   let l:name = input('Ouvrir fichier: ', '', 'file')
-  if filereadable(l:name)
-    execute 'edit' fnameescape(l:name)
+  if empty(l:name)
+    return
+  endif
+  let l:path = fnamemodify(l:name, ':p') " chemin absolu
+  if filereadable(l:path)
+    execute 'edit' fnameescape(l:path)
   else
-    echo "Fichier introuvable: " . l:name
+    echo "Fichier introuvable: " . l:path
   endif
 endfunction
 
